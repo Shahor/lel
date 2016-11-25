@@ -59,9 +59,6 @@ try {
 }
 ```
 
-As you can see, I have been overprotective with this code, on purpose.
-What it shows is that you have *no way* to know where the problem comes from.
-
 # The end of the world
 
 So basically if at any point someone introduces the code from this package 
@@ -73,6 +70,34 @@ Object.prototype.then = () => {} // Break all the REST apis \o/
 in a popular one, all hell will break lose.
 
 The same happens, and this could be very painful, if someone manages to hack a CDN and do this as well. 
+
+# Debugging
+
+As you can see, I have been overprotective with the bits of code above, on purpose.
+What it shows is that you have *no way* to know where the problem comes from.
+
+The reason for that is the Promise will never resolve nor reject.
+
+A thenable's then function is given the resolve|reject callbacks and should act on it like so : 
+
+```js
+let obj = {
+	then : (resolve, reject) => {
+		resolve(42)
+	}
+}
+
+Promise.resolve(obj)
+	.then(value => {
+		console.log(value) // 42
+	})
+```
+
+Otherwise, you now know what happens.
+
+There's no fix for this, and if someone decides to play bad with this stuff, you're in for a hell of a debugging session. 
+
+Yay js, I guess...
 
 # Warnings 
 
