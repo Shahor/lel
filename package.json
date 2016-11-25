@@ -1,6 +1,6 @@
 {
   "name": "lel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A package that makes Promise great again!",
   "main": "index.js",
   "scripts": {
