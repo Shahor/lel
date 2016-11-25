@@ -60,6 +60,9 @@ try {
 }
 ```
 
+As you can see, I have been overprotective with this code, on purpose.
+What it shows is that you have *no way* to know where the problem comes from.
+
 # The end of the world
 
 So basically if at any point someone introduces the code from this package 
