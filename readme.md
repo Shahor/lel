@@ -1,10 +1,9 @@
 # Potentially dangerous behavior from Promises
 
-Promises seem to try and find it a value has the method .then before wrapping it to pass it in the resolve/reject callbacks.
-Its like duck typing, except in this case its not good enough. 
+I found about about this after I found out about the problem the hard way, but go [read the spec](https://promisesaplus.com/), and especially the part about thenables and ```The Promise Resolution Procedure```
 
+```“thenable” is an object or function that defines a then method.```
 
-Here's how I found out about the problem, and what happens exactly
 (you can test this code on [jsbin](http://jsbin.com/qizexuredo/edit?js,console))
 
 ```js
@@ -33,7 +32,7 @@ try {
 
 # The problem
 
-I initially found out about this while experimenting with Proxies and thought the issue was with their implementation, but as you can see in the following code (and this [jsbin](http://jsbin.com/reyococeca/edit?js,console)) it is really in the Promise implementation, and happens at least on Firefox/Chrome.
+I initially found out about this while experimenting with Proxies and thought the issue was with their implementation, but as you can see in the following code (and this [jsbin](http://jsbin.com/reyococeca/edit?js,console)) it is really in the Promise implementation [edit : spec].
 
 ```js
 let obj = {
