@@ -1,3 +1,5 @@
+[![NPM](https://nodei.co/npm/numparser.png?downloads=true)](https://nodei.co/npm/numparser.png?downloads=true)
+
 # Potentially dangerous behavior from Promises
 
 I found about about this after I found out about the problem the hard way, but go [read the spec](https://promisesaplus.com/), and especially the part about thenables and ```The Promise Resolution Procedure```
