@@ -1,4 +1,4 @@
-[![NPM](https://nodei.co/npm/numparser.png?downloads=true)](https://nodei.co/npm/numparser.png?downloads=true)
+[![NPM](https://nodei.co/npm/lel.png?downloads=true)](https://nodei.co/npm/lel.png?downloads=true)
 
 # Potentially dangerous behavior from Promises
 
