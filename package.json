@@ -1,0 +1,24 @@
+{
+  "name": "lel",
+  "version": "1.0.0",
+  "description": "A package that makes Promise great again!",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/tape/bin/tape tests/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com:Shahor/lel.git"
+  },
+  "keywords": [
+    "promise",
+    "object",
+    "polyfill",
+    "awesome"
+  ],
+  "author": "Shahor",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^4.6.3"
+  }
+}
