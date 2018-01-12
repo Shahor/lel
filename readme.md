@@ -2,6 +2,8 @@
 
 # Potentially dangerous behavior from Promises
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Shahor/lel.svg)](https://greenkeeper.io/)
+
 I found about about this after I found out about the problem the hard way, but go [read the spec](https://promisesaplus.com/), and especially the part about thenables and ```The Promise Resolution Procedure```
 
 ```“thenable” is an object or function that defines a then method.```
